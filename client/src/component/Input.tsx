@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Input: React.FC = () => {
   const [digits, setDigits] = useState<string[]>(["", "", "", "", "", ""]); // Initialize state with 6 empty strings
   const inputRefs = useRef<HTMLInputElement[]>([]);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // Focus on next input or submit if all digits are entered
   const handleInputChange = (index: number, value: string) => {
@@ -114,8 +114,8 @@ const Input: React.FC = () => {
         if (!response.ok) {
           throw new Error("Verification Error");
         }
-
-        navigate("/success");
+        window.location.href = "/success";
+        // navigate("/success");
       } catch (error) {
         console.error(error);
         alert("Verification Error");

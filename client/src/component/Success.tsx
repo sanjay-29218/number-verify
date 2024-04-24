@@ -7,7 +7,7 @@ const Success = (props: Props) => {
   const navigate = useNavigate();
   return (
     <div style={{ display: "grid", placeContent: "center", height: "100vh" }}>
-      <h1>SuccessFully Verified</h1>
+      <h1 role="verified">SuccessFully Verified</h1>
       <button
         style={{
           padding: "10px",
