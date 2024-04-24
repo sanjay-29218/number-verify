@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import "./input.css"; // Import CSS file
 import { useNavigate } from "react-router-dom";
 
-const VInput: React.FC = () => {
+const Input: React.FC = () => {
   const [digits, setDigits] = useState<string[]>(["", "", "", "", "", ""]); // Initialize state with 6 empty strings
   const inputRefs = useRef<HTMLInputElement[]>([]);
   const navigate = useNavigate();
@@ -174,4 +174,4 @@ const VInput: React.FC = () => {
   );
 };
 
-export default VInput;
+export default Input;
