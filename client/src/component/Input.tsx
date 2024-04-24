@@ -67,7 +67,6 @@ const Input: React.FC = () => {
   };
 
   // Handle paste event
-  // Handle paste event
   const handlePaste = (
     event: React.ClipboardEvent<HTMLInputElement>,
     index: number
@@ -97,7 +96,6 @@ const Input: React.FC = () => {
 
     digits.forEach((digit, i) => {
       if (digit === "") {
-        // inputRefs.current[i].focus();
         inputRefs.current[i].style.border = "1px solid red";
       }
     });
@@ -117,12 +115,9 @@ const Input: React.FC = () => {
           throw new Error("Verification Error");
         }
 
-        // Redirect to success route if request is successful
         navigate("/success");
       } catch (error) {
-        // Handle error response
         console.error(error);
-        // Display verification error message
         alert("Verification Error");
       }
     }
